@@ -30,7 +30,7 @@
   padding: 25px; /* Slightly more padding */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 380px; /* Adjusted max-width */
+  max-width: 480px; /* Increased max-width for more buttons */
 }
 
 .display {
@@ -46,6 +46,22 @@
   justify-content: space-between; /* Pushes previous to top, current to bottom */
   word-wrap: break-word;
   word-break: break-all;
+  position: relative; /* For positioning angle mode display */
+}
+
+.angleModeDisplay {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #bbb;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+.angleModeDisplay:hover {
+  background-color: rgba(255,255,255,0.1);
 }
 
 .previousOperand {
@@ -64,16 +80,22 @@
 
 .buttonGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  /* grid-template-columns: repeat(4, 1fr); */ /* Base, will be overridden by scientificGrid */
+  gap: 10px; /* Default gap */
 }
+
+.scientificGrid { /* New class for the grid with scientific functions */
+  grid-template-columns: repeat(5, 1fr); /* Now 5 columns */
+  gap: 8px; /* Consider reducing gap or button padding if space is tight */
+}
+
 
 .button {
   background-color: #f0f0f0; /* Lighter grey for number buttons */
   border: none; /* Remove border for a flatter look */
   border-radius: 8px; /* More rounded buttons */
-  padding: 20px;
-  font-size: 1.3rem; /* Slightly larger font */
+  padding: 15px; /* Adjust padding if buttons are too large for 5 columns */
+  font-size: 1.1rem; /* Adjust font size if needed */
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -91,6 +113,12 @@
 
 .button.spanTwo {
   grid-column: span 2;
+  /* If you still have spanTwo for '0' and it's in a 5-column grid, 
+     it might need specific placement or not span two generic columns.
+     For simplicity, let's assume '0' takes one column in the new layout for now,
+     or adjust its grid-column property specifically if it needs to span.
+     The provided HTML above keeps it spanTwo, which means it will take 2/5ths of the width.
+  */
 }
 
 .functionButton { /* For AC, DEL, % */
@@ -114,6 +142,25 @@
 .operatorButton:active {
   background-color: #c07b08;
 }
+
+.sciFunctionButton { /* Style for scientific function buttons */
+  background-color: #6c757d; /* A different shade of grey */
+  color: white;
+}
+.sciFunctionButton:hover {
+  background-color: #5a6268;
+}
+.sciFunctionButton:active {
+  background-color: #545b62;
+}
+
+.placeholderButton { /* Style for empty grid cells if used for alignment */
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  pointer-events: none; /* Make it non-interactive */
+}
+
 
 .footer {
   width: 100%;
