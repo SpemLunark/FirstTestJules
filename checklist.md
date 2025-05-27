@@ -1,41 +1,41 @@
 # Engineering Calculator Development Checklist
 
 ## Phase 1: Project Setup & Basic Structure
-- [ ] Initialize Git repository and create `develop` branch. (Partially done - branch will be handled by Jules)
-- [ ] Create basic HTML structure (`index.html`):
-    - [ ] Display area (for input and results)
-    - [ ] Button grid container
-- [ ] Create basic CSS file (`style.css`):
-    - [ ] Initial styling for layout, display, and buttons.
-- [ ] Create JavaScript file (`script.js`).
+- [x] Initialize Git repository and create `develop` branch. (Partially done - branch will be handled by Jules)
+- [x] Create basic HTML structure (`index.html`):
+    - [x] Display area (for input and results)
+    - [x] Button grid container
+- [x] Create basic CSS file (`style.css`):
+    - [x] Initial styling for layout, display, and buttons.
+- [x] Create JavaScript file (`script.js`).
 
 ## Phase 2: Core Calculator Logic (JavaScript)
-- [ ] Implement number input (0-9, .).
-- [ ] Implement basic arithmetic operators (+, -, *, /).
-- [ ] Implement clear (C/AC) and backspace/delete functionality.
-- [ ] Implement equals (=) button to perform calculation.
-- [ ] Handle order of operations (PEMDAS/BODMAS) if complex expressions are to be input directly. (Alternatively, adopt an immediate execution model).
-- [ ] Display input and results dynamically.
-- [ ] Implement error handling (e.g., division by zero, invalid input).
+- [x] Implement number input (0-9, .).
+- [x] Implement basic arithmetic operators (+, -, *, /).
+- [x] Implement clear (C/AC) and backspace/delete functionality.
+- [x] Implement equals (=) button to perform calculation.
+- [x] Handle order of operations (PEMDAS/BODMAS) if complex expressions are to be input directly. (Alternatively, adopt an immediate execution model).
+- [x] Display input and results dynamically.
+- [x] Implement error handling (e.g., division by zero, invalid input).
 
 ## Phase 3: Scientific Functions (JavaScript)
-- [ ] Implement trigonometric functions (sin, cos, tan).
-    - [ ] Add Deg/Rad mode toggle and functionality.
-- [ ] Implement inverse trigonometric functions (asin, acos, atan).
-- [ ] Implement logarithmic functions (ln, log).
-- [ ] Implement exponential functions (e^x, 10^x).
-- [ ] Implement power function (x^y).
-- [ ] Implement square root (√).
-- [ ] Implement Pi (π) and Euler's (e) constants.
-- [ ] Implement factorial (n!).
-- [ ] Implement absolute value (|x|).
+- [x] Implement trigonometric functions (sin, cos, tan).
+    - [x] Add Deg/Rad mode toggle and functionality.
+- [x] Implement inverse trigonometric functions (asin, acos, atan).
+- [x] Implement logarithmic functions (ln, log).
+- [x] Implement exponential functions (e^x, 10^x).
+- [x] Implement power function (x^y).
+- [x] Implement square root (√).
+- [x] Implement Pi (π) and Euler's (e) constants.
+- [x] Implement factorial (n!).
+- [x] Implement absolute value (|x|).
 
 ## Phase 4: Memory Functions (JavaScript)
-- [ ] Implement Memory Clear (MC).
-- [ ] Implement Memory Recall (MR).
-- [ ] Implement Memory Add (M+).
-- [ ] Implement Memory Subtract (M-).
-- [ ] Visual indicator for memory state (e.g., "M" symbol on display).
+- [x] Implement Memory Clear (MC).
+- [x] Implement Memory Recall (MR).
+- [x] Implement Memory Add (M+).
+- [x] Implement Memory Subtract (M-).
+- [x] Visual indicator for memory state (e.g., "M" symbol on display).
 
 ## Phase 5: Calculation History (JavaScript & HTML/CSS)
 - [ ] Design HTML structure for history display.
@@ -45,12 +45,12 @@
 - [ ] Implement functionality to clear history.
 
 ## Phase 6: UI/UX Enhancements & Styling
-- [ ] Refine CSS for a polished look and feel.
+- [x] Refine CSS for a polished look and feel.
 - [ ] Ensure responsive design for desktop, tablets, and mobile devices.
     - [ ] Test on various screen sizes/emulators.
 - [ ] Implement keyboard support for input and operations.
-- [ ] Add hover and active states for buttons.
-- [ ] Ensure accessibility (ARIA attributes, keyboard navigation).
+- [x] Add hover and active states for buttons.
+- [x] Ensure accessibility (ARIA attributes, keyboard navigation).
 
 ## Phase 7: Testing & Refinement
 - [ ] Perform thorough unit testing for all functions.

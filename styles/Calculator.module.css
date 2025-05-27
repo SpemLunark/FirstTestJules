@@ -30,7 +30,7 @@
   padding: 25px; /* Slightly more padding */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 480px; /* Increased max-width for more buttons */
+  max-width: 560px; /* Increased max-width for 6 columns */
 }
 
 .display {
@@ -47,6 +47,15 @@
   word-wrap: break-word;
   word-break: break-all;
   position: relative; /* For positioning angle mode display */
+}
+
+.memoryIndicator {
+  position: absolute;
+  top: 5px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  font-size: 0.9rem;
+  color: #0f0; /* Green to indicate memory is set */
+  font-weight: bold;
 }
 
 .angleModeDisplay {
@@ -80,13 +89,12 @@
 
 .buttonGrid {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */ /* Base, will be overridden by scientificGrid */
   gap: 10px; /* Default gap */
 }
 
-.scientificGrid { /* New class for the grid with scientific functions */
-  grid-template-columns: repeat(5, 1fr); /* Now 5 columns */
-  gap: 8px; /* Consider reducing gap or button padding if space is tight */
+.scientificGridSixCol { /* New class for the grid with scientific and memory functions */
+  grid-template-columns: repeat(6, 1fr); /* Now 6 columns */
+  gap: 8px; /* Slightly reduced gap */
 }
 
 
@@ -94,11 +102,14 @@
   background-color: #f0f0f0; /* Lighter grey for number buttons */
   border: none; /* Remove border for a flatter look */
   border-radius: 8px; /* More rounded buttons */
-  padding: 15px; /* Adjust padding if buttons are too large for 5 columns */
-  font-size: 1.1rem; /* Adjust font size if needed */
+  padding: 12px; /* Adjust padding for 6 columns */
+  font-size: 1rem; /* Adjust font size for 6 columns */
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex; /* For centering content */
+  justify-content: center; /* For centering content */
+  align-items: center; /* For centering content */
 }
 
 .button:hover {
@@ -112,14 +123,12 @@
 }
 
 .button.spanTwo {
-  grid-column: span 2;
-  /* If you still have spanTwo for '0' and it's in a 5-column grid, 
-     it might need specific placement or not span two generic columns.
-     For simplicity, let's assume '0' takes one column in the new layout for now,
-     or adjust its grid-column property specifically if it needs to span.
-     The provided HTML above keeps it spanTwo, which means it will take 2/5ths of the width.
-  */
+  grid-column: span 2; 
 }
+.button.spanThree { /* For '0' button in 6-col layout */
+  grid-column: span 3;
+}
+
 
 .functionButton { /* For AC, DEL, % */
   background-color: #a5a5a5; /* Darker grey */
@@ -152,6 +161,17 @@
 }
 .sciFunctionButton:active {
   background-color: #545b62;
+}
+
+.memoryButton { /* Style for memory function buttons */
+  background-color: #4a90e2; /* A distinct blue color */
+  color: white;
+}
+.memoryButton:hover {
+  background-color: #3a7bc0;
+}
+.memoryButton:active {
+  background-color: #306cad;
 }
 
 .placeholderButton { /* Style for empty grid cells if used for alignment */
