@@ -38,11 +38,11 @@
 - [x] Visual indicator for memory state (e.g., "M" symbol on display).
 
 ## Phase 5: Calculation History (JavaScript & HTML/CSS)
-- [ ] Design HTML structure for history display.
-- [ ] Style history display using CSS.
-- [ ] Implement JavaScript to record calculations in history.
-- [ ] Implement functionality to click history items to reuse them.
-- [ ] Implement functionality to clear history.
+- [x] Design HTML structure for history display.
+- [x] Style history display using CSS.
+- [x] Implement JavaScript to record calculations in history.
+- [x] Implement functionality to click history items to reuse them.
+- [x] Implement functionality to clear history.
 
 ## Phase 6: UI/UX Enhancements & Styling
 - [x] Refine CSS for a polished look and feel.

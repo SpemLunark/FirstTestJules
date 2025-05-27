@@ -191,3 +191,108 @@
   align-items: center;
   margin-top: 2rem;
 }
+
+/* New styles for overall app layout and history section */
+.appContainer {
+  display: flex;
+  flex-direction: row; /* Calculator and History side-by-side on wider screens */
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow history to wrap below on smaller screens */
+}
+
+.calculatorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center calculator within its wrapper */
+}
+
+.historyContainer {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 300px; /* Max width for history panel */
+  max-height: 500px; /* Max height for history, scrollable */
+  overflow-y: auto;
+  margin-top: 2rem; /* Add some margin when it wraps below */
+}
+
+/* Responsive layout for history */
+@media (max-width: 900px) { /* Adjust breakpoint as needed */
+  .appContainer {
+    flex-direction: column;
+    align-items: center; /* Center items when stacked */
+  }
+  .historyContainer {
+    max-width: 560px; /* Allow history to take calculator width on smaller screens */
+    margin-top: 2rem;
+  }
+}
+
+
+.historyTitle {
+  font-size: 1.3rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.historyPlaceholder {
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
+.clearHistoryButton {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.clearHistoryButton:hover {
+  background-color: #c0392b;
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historyItem {
+  padding: 8px 5px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.historyItem:last-child {
+  border-bottom: none;
+}
+.historyItem:hover {
+  background-color: #e9e9e9;
+}
+
+.historyExpression {
+  color: #555;
+  display: block; /* Or inline-block with margin */
+  margin-bottom: 3px;
+}
+
+.historyResult {
+  color: #222;
+  font-weight: bold;
+  display: block; /* Or inline-block */
+  text-align: right;
+}
