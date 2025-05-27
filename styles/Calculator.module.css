@@ -21,38 +21,45 @@
   line-height: 1.15;
   font-size: 2.5rem;
   text-align: center;
+  color: #333; /* Or a color that fits your theme */
 }
 
 .calculator {
-  background-color: #e0e0e0;
+  background-color: #d1d1d1; /* A slightly different background for the calculator body */
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 25px; /* Slightly more padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 400px; /* Adjust as needed */
+  max-width: 380px; /* Adjusted max-width */
 }
 
 .display {
   background-color: #222;
   color: white;
-  border-radius: 5px;
-  padding: 15px 20px;
+  border-radius: 8px; /* Slightly more rounded */
+  padding: 20px; /* More padding */
   text-align: right;
   margin-bottom: 20px;
-  min-height: 70px; /* Ensure it doesn't collapse */
+  min-height: 80px; /* Adjusted min-height */
+  display: flex; /* For better alignment of previous/current operand */
+  flex-direction: column;
+  justify-content: space-between; /* Pushes previous to top, current to bottom */
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .previousOperand {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.9rem;
-  min-height: 1.2rem; /* Space for previous operand */
+  font-size: 1rem; /* Slightly larger */
+  min-height: 1.5rem; /* Adjusted */
 }
 
 .currentOperand {
-  font-size: 1.8rem;
+  font-size: 2.2rem; /* Larger for current number */
   font-weight: bold;
-  word-wrap: break-word;
-  word-break: break-all;
+  min-height: 2.5rem; /* Ensure space even if empty */
+  word-wrap: break-word; /* Ensure long numbers wrap */
+  word-break: break-all; /* Ensure long numbers break */
 }
 
 .buttonGrid {
@@ -62,38 +69,51 @@
 }
 
 .button {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #f0f0f0; /* Lighter grey for number buttons */
+  border: none; /* Remove border for a flatter look */
+  border-radius: 8px; /* More rounded buttons */
   padding: 20px;
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Slightly larger font */
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .button:hover {
-  background-color: #eee;
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .button:active {
-  background-color: #ddd;
+  background-color: #d0d0d0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .button.spanTwo {
   grid-column: span 2;
 }
 
-/* Example for operator buttons, can be more specific */
-.button:nth-child(4n), /* Assuming operators are in the 4th column */
-.button:last-child { /* Assuming '=' is an operator */
-  background-color: #ff9500; /* Orange for operators */
-  color: white;
+.functionButton { /* For AC, DEL, % */
+  background-color: #a5a5a5; /* Darker grey */
+  color: black;
 }
-.button:nth-child(4n):hover,
-.button:last-child:hover {
-  background-color: #e08500;
+.functionButton:hover {
+  background-color: #959595;
+}
+.functionButton:active {
+  background-color: #858585;
 }
 
+.operatorButton { /* For +, -, ×, ÷, = */
+  background-color: #ff9f0a; /* Orange for operators */
+  color: white;
+}
+.operatorButton:hover {
+  background-color: #e08d09;
+}
+.operatorButton:active {
+  background-color: #c07b08;
+}
 
 .footer {
   width: 100%;
